@@ -1,3 +1,3 @@
 # p5.js Art
 
-View [here](https://emmadonnelly.github.io/p5js-art/).
+View [here](https://altcodegirl.github.io/p5js-art/).
