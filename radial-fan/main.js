@@ -7,7 +7,7 @@ function setup() {
   stroke(0);
   textSize(100);
   textAlign(CENTER);
-  text("sketchpad", 0, windowHeight / 2 - 75, windowWidth, windowHeight);
+  text("radial fan", 0, windowHeight / 2 - 75, windowWidth, windowHeight);
 }
 
 function draw() {
