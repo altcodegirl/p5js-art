@@ -1,69 +1,42 @@
-var r;
-var backgroundColor;
-var isOverRectangle;
+var b;
+var w;
+var
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  backgroundColor = color(255);
   fill(0);
-  stroke(0);
-  r = color (0);
+  noStroke(0);
+  b = color (0);
+  w = color (255);
 }
 
 function draw()
 {
-  background(backgroundColor);
-	// display instructions for top bar
+//  display instructions for top bar
 	noStroke();
 	fill(200);
 	rect(0, 0, width, 25);
 	fill(0);
-	text("draw your mandala", 10, 15);
-
-  // check if mouse is inside the rectangle
-  // mouseX >= x && mouseX <= x+width && mouseY >= y && mouseY <= y+height
-  if (mouseX >= 150 && mouseX <= 150+100 && mouseY >= 150 && mouseY <= 150+100)
-  {
-    isOverRectangle = true;
-  } else {
-    isOverRectangle = false;
-  }
-
-  // draw a rectangle
-  rectMode(CORNER);
-  stroke(0);
-  strokeWeight(5);
-  if(isOverRectangle == true)
-  {
-    fill(100);
-    cursor(HAND);
-  } else {
-	fill(200);
-	cursor(ARROW);
-  }
-  rect(150, 150, 100, 100);
-
-}
-
-function mousePressed()
-{
-  if(isOverRectangle == true)
-  {
-    backgroundColor = color(random(255));
-  }
+	text("b for black, w for white", 10, 15);
 }
 
 function mouseDragged()
 {
  strokeWeight(1);
- stroke(r);
+ stroke(b);
  line(mouseX, mouseY, pmouseX, pmouseY);
 }
 
-function keyPressed()
+function keyPressed(key == ' ')
 {
-	if(key == 'r' || key == 'R')
+	if(backgroundColor=0)
 	{
-		r = color(255, 0, 0);
+    backgroundColor(255);
+    fill(0);
+	}
+  else
+	{
+    backgroundColor(0);
+    fill(255);
 	}
 }
